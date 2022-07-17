@@ -196,7 +196,7 @@ end
 Embed Lua program source code.
 --]]
 local function out_lua_source(file)
-	local f = io.open(file.path, "r")
+	local f = io.open(file.path, "rb")
 	local prefix = f:read(4)
 	if prefix then
 		if prefix:match("\xef\xbb\xbf") then
